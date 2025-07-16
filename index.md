@@ -23,13 +23,19 @@ We call transient errors that cause the computer to misbehave *single-event effe
 #### Single-Event Upsets
 
 The most common single-event effect we see in space are *single-event upsets* (SEUs), which are essentially radiation-induced bit-flips in memory, cache, or the compute pipelines.
+[Efficient Modular Redundancy](emr) (EMR) addresses this problem by automatically replicating non-ECC-protected actions and intelligently scheduling the replicated compute to minimize the runtime.
+In our tests with real-world use cases including encryption, data compression, and global localization, EMR is 1.4 - 35.5x more efficient than state-of-the-art triple modular redundancy.
 
 #### Single-Event Latchups
 
 The residual charge left by radiation particles can change transistor structures and cause a localized short-circuit known as *single-event latchups* (SELs).
-This causes the short-circuited area to generate a ton of heat.
+This causes the short-circuited area to generate a ton of heat, and cause a slight increase in current draw by the affected IC.
 And in space, you don't have an atmosphere for the heat to dissipate into, so the heat eventually overheats and destroys the chip.
 Fortunately, as long as we can detect these latch-ups, we can simply power cycle the affected chip before it burns out.
 This draws out the residual charge that caused the latchup in the first place, and the chip will work like normal again.
 
+To address the renewed threat of micro-SELs of <1A on modern process nodes, we developed [Idle Latchup Detector](/ild) (ILD), a high-fidelity detector for SEL events.
+Since micro-SELs trigger very small changes in the system's current draw, the only reliable time to observe the current draw change is when the system is idle.
+ILD uses OS-visible performance counters to automatically determine when the system is naturally idle, and uses a lightweight ML model to check if current draw is within nominal bounds.
+In our testing, ILD has a 0.02% false positive rate, and a 0% false negative rate.
 
