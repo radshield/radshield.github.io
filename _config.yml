@@ -18,7 +18,7 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Shields Up!
+title: Radshield
 author:
   name: Columbia University, NASA-JPL, and Aptos Orbital
   email: haoda.wang@columbia.edu
