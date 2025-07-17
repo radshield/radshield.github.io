@@ -13,6 +13,8 @@ EMR automatically inserts cache clears and schedules subcomputations to minimize
 
 [Check out the code here!](https://github.com/radshield/dtss)
 
+![Radshield system diagram](assets/img/radshield.jpg)
+
 # Requirements
 * Boost 1.45
 * Clang 8 or higher
