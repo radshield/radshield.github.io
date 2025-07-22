@@ -8,7 +8,7 @@ permalink: /
 
 Radshield is a set of two software systems that protect against the two most prevalent radiation errors facing spacecraft operators today: single-event latchups and single-event upsets.
 This increases the reliability of commodity hardware and enables them to act as reliable flight computers or co-processors on spacecraft.
-Radshield is tested in real-world systems, from commodity SmallSats to a commodity compute element onboard the Perseverance Mars rover.
+Radshield is tested in real-world systems, from low-cost SmallSats to a commodity compute element onboard the Perseverance Mars rover.
 
 > The 9000 series is the most reliable computer ever made. No 9000 computer has ever made a mistake or distorted information. We are all, by any practical definition of the words, foolproof and incapable of error.
 
