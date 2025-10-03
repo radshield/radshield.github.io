@@ -5,7 +5,7 @@ page_title: Related Publications
 menu: main
 ---
 
-#### Shields Up! Software Radiation Protection for Commodity Hardware in Space
+#### Radshield: Software Radiation Protection for Commodity Hardware in Space
 ASPLOS 2026 [paper](assets/asplos26_shieldsup.pdf)
 
 #### Mars Attacks! Software Protection Against Space Radiation
